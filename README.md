@@ -18,22 +18,38 @@
 - **Simple, universal API**  
   - Easy to call from other mods (single line integration)
 - **Designed for mod developers**  
-  - Plug & play with any Fabric mod, minimal config, thread-safe
+  - Plug & play with any Fabric or Forge mod, minimal config, thread-safe
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Add as a dependency (Gradle)
+### 1. Add as a dependency
 
+> Replace with the version you want (`0.10` is the latest stable at publish time).  
+> Make sure the repository and dependency matches your chosen loader.
+
+#### **Fabric (or Fabric-compatible loader)**
 ```groovy
+repositories {
+    maven { url = 'https://tamkungz.github.io/liteup/' }
+}
 dependencies {
-    modImplementation "th.in.tamkungz:liteup:0.10"
+    modImplementation 'th.in.tamkungz:liteup:0.10'
 }
 ```
-> (Make sure to replace with the version you want)
 
-Or add the jar to your mods folder for local use.
+#### **Forge (or Forge-compatible loader)**
+```groovy
+repositories {
+    maven { url = 'https://tamkungz.github.io/liteup/' }
+}
+dependencies {
+    implementation 'th.in.tamkungz:liteup:0.10'
+}
+```
+
+> Or add the jar to your mods folder for local use.
 
 ---
 
@@ -106,7 +122,7 @@ Object answer = CacheManager.GLOBAL_CACHE.getIfPresent(42);
 
 ## 📦 Integration
 
-- Works out-of-the-box with [Fabric API](https://fabricmc.net/)
+- Works out-of-the-box with [Fabric API](https://fabricmc.net/) and [Forge](https://files.minecraftforge.net/)
 - No config needed (default settings are safe and fast)
 - Support for both client and server environments
 
@@ -116,7 +132,7 @@ Object answer = CacheManager.GLOBAL_CACHE.getIfPresent(42);
 
 - Minecraft 1.20.x (see `gradle.properties` for exact versions)
 - Java 17+
-- Fabric Loader 0.16.8 or newer
+- Fabric Loader 0.16.8+ or Forge (matching your modpack)
 
 ---
 
@@ -137,6 +153,7 @@ Object answer = CacheManager.GLOBAL_CACHE.getIfPresent(42);
 - **Performance-first utility design**
 - **Production-grade metrics and logging**
 - **Ready for modpacks and large servers**
+- **Supports both Fabric and Forge mod environments**
 
 ---
 
