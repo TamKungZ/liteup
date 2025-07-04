@@ -14,7 +14,6 @@ repositories {
 
 loom {
     splitEnvironmentSourceSets()
-
     mods {
         liteup {
             sourceSet sourceSets.main
@@ -24,28 +23,28 @@ loom {
 }
 
 dependencies {
+    // --- Minecraft & Fabric ---
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	//modImplementation "net.fabricmc.fabric-api:fabric-lifecycle-events-v1:0.92.6+1.20.1"
+    // modImplementation "net.fabricmc.fabric-api:fabric-lifecycle-events-v1:0.92.6+1.20.1"
 
-
-	// Performance libraries
+    // --- Performance Libraries ---
     implementation 'it.unimi.dsi:fastutil:8.5.15'
     implementation 'org.eclipse.collections:eclipse-collections:12.0.0.M3'
     implementation 'org.jctools:jctools-core:4.0.5'
     implementation 'com.lmax:disruptor:4.0.0'
 
-	implementation 'com.github.ben-manes.caffeine:caffeine:3.2.1'
-	implementation 'io.micrometer:micrometer-core:1.15.0'
-	implementation 'io.github.resilience4j:resilience4j-core:2.3.0'
+    implementation 'com.github.ben-manes.caffeine:caffeine:3.2.1'
+    implementation 'io.micrometer:micrometer-core:1.15.0'
+    implementation 'io.github.resilience4j:resilience4j-core:2.3.0'
 
-	implementation 'com.epam.reportportal:logger-java-log4j:5.2.3'
-	implementation 'com.epam.reportportal:logger-java-logback:5.2.3'
-
+    // --- Logging Libraries ---
     implementation 'org.tinylog:tinylog-api:2.7.0'
     implementation 'org.tinylog:tinylog-impl:2.7.0'
+    implementation 'com.epam.reportportal:logger-java-log4j:5.2.3'
+    implementation 'com.epam.reportportal:logger-java-logback:5.2.3'
 }
 
 processResources {
@@ -57,6 +56,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     options.release = 17
+    options.encoding = 'UTF-8'
 }
 
 java {
@@ -67,14 +67,9 @@ java {
 
 jar {
     inputs.property "archivesName", project.base.archivesName
-
     from("LICENSE") {
         rename { "${it}_${inputs.properties.archivesName}" }
     }
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
 }
 
 publishing {
@@ -86,7 +81,7 @@ publishing {
             version = project.version
         }
     }
-	repositories {
+    repositories {
         mavenLocal()
     }
 }
