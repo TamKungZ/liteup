@@ -1,0 +1,173 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "th.in.tamkungz",
+    "module": "liteup",
+    "version": "0.10",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "liteup-0.10.jar",
+          "url": "liteup-0.10.jar",
+          "size": 31119,
+          "sha512": "6d8ed1173c589d50b1a7e02d30a27b9b822edd796e7dc6fcfad0c6c82f606e574f829c6fc70bdffd56f30b6d3dc4b7f6e4afbbaf0d7aaeba2014166d6f519dd9",
+          "sha256": "45e9d1d78249e1b494ee39d66cf0c0218e7eef55f60a7d1576ed7271fc827b45",
+          "sha1": "d3ca54358e9a5b192e9eabe66937fb8bd72fa420",
+          "md5": "ec9992aceb5d91beef714c74d2150aef"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "it.unimi.dsi",
+          "module": "fastutil",
+          "version": {
+            "requires": "8.5.15"
+          }
+        },
+        {
+          "group": "org.eclipse.collections",
+          "module": "eclipse-collections",
+          "version": {
+            "requires": "12.0.0.M3"
+          }
+        },
+        {
+          "group": "org.jctools",
+          "module": "jctools-core",
+          "version": {
+            "requires": "4.0.5"
+          }
+        },
+        {
+          "group": "com.lmax",
+          "module": "disruptor",
+          "version": {
+            "requires": "4.0.0"
+          }
+        },
+        {
+          "group": "com.github.ben-manes.caffeine",
+          "module": "caffeine",
+          "version": {
+            "requires": "3.2.1"
+          }
+        },
+        {
+          "group": "io.micrometer",
+          "module": "micrometer-core",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "io.github.resilience4j",
+          "module": "resilience4j-core",
+          "version": {
+            "requires": "2.3.0"
+          }
+        },
+        {
+          "group": "org.tinylog",
+          "module": "tinylog-api",
+          "version": {
+            "requires": "2.7.0"
+          }
+        },
+        {
+          "group": "org.tinylog",
+          "module": "tinylog-impl",
+          "version": {
+            "requires": "2.7.0"
+          }
+        },
+        {
+          "group": "com.epam.reportportal",
+          "module": "logger-java-log4j",
+          "version": {
+            "requires": "5.2.3"
+          }
+        },
+        {
+          "group": "com.epam.reportportal",
+          "module": "logger-java-logback",
+          "version": {
+            "requires": "5.2.3"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.10"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.92.6+1.20.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "liteup-0.10.jar",
+          "url": "liteup-0.10.jar",
+          "size": 31119,
+          "sha512": "6d8ed1173c589d50b1a7e02d30a27b9b822edd796e7dc6fcfad0c6c82f606e574f829c6fc70bdffd56f30b6d3dc4b7f6e4afbbaf0d7aaeba2014166d6f519dd9",
+          "sha256": "45e9d1d78249e1b494ee39d66cf0c0218e7eef55f60a7d1576ed7271fc827b45",
+          "sha1": "d3ca54358e9a5b192e9eabe66937fb8bd72fa420",
+          "md5": "ec9992aceb5d91beef714c74d2150aef"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "liteup-0.10-sources.jar",
+          "url": "liteup-0.10-sources.jar",
+          "size": 27703,
+          "sha512": "d96da1c915b1291a05c4efa1f8272a1c9d9c6042d8d97e558d302d5af1cbfef116f5730ed68fe2d97b698578327b9a18097c94d22795003a43ca7dd4507cf4d6",
+          "sha256": "025e34ee4435fae26d2c0d464b8a9d6bf58a94243549fb6f799b29bd8f9a0710",
+          "sha1": "ee003efb1ea56136269bd32c4136545985685f98",
+          "md5": "054329c041435c9db2b2e84570217b81"
+        }
+      ]
+    }
+  ]
+}
